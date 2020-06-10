@@ -1,20 +1,39 @@
-h1 { color: red }
+body { 
+  background-color: #fafafa;
+  font-family: 'Zilla Slab', serif;
+  font-size: 24px;
+  padding: 0;
+  margin: 0;
+}
 
+h1 { 
+  color: red;
+  font-size: 1.5em;
+}
+
+/* Set default for container and items */
 .container {
   padding: 0;
   margin: 0;
   display: flex;
   height: 100vh;
-  /* -ms-box-orient: horizontal;
-  /* display: -webkit-box; */
-  /* display: -moz-box;
-  display: -ms-flexbox;
-  display: -moz-flex;  */
-  /* display: -webkit-flex; */
 }
 
+.item {
+  background-color: #efdcd5;
+  padding: 2rem;
+  margin: 0.1rem;
+  text-align: center;
+  flex: 1 1 auto;
+}
+
+.title {
+  padding: 1.5rem;
+  flex: 2 1 auto
+}
+
+/* Alternative Options for flex direction */
 .container-reverse {
-  display: flex;
   flex-direction: row-reverse
 }
 
@@ -22,13 +41,81 @@ h1 { color: red }
   flex-direction: column
 }
 
+/* Add flex wrap properties */
 .wrap {
   -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 
-.item {
-  background-color: #efdcd5;
-  padding: 2rem;
-  margin: 1rem
+/* Set alignment along main axis */
+.justify-start {
+  /* not supported in chrome */
+  justify-content: start;
+}
+
+.justify-flex-end {
+  justify-content: flex-end;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-space-between {
+  /* not fully supported in edge */
+  justify-content: space-between safe;
+}
+
+.justify-space-around {
+  justify-content: space-around;
+}
+
+.justify-space-evenly {
+  justify-content: space-evenly;
+}
+
+/* Set alignment options along cross-axis */
+.align-items-start {
+  align-items: flex-start;
+}
+
+.align-items-end {
+  align-items: flex-end;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.align-items-between {
+  align-items: space-between;
+}
+
+.align-items-around {
+  align-items: space-around;
+}
+
+.align-items-evenly {
+  align-items: space-evenly;
+}
+
+.align-content-start {
+  align-content: flex-start;
+}
+
+.align-content-stretch {
+  align-content: stretch;
+}
+
+/* Align properties for individual item  */
+.align-self-stretch {
+  align-self: stretch;
+}
+
+.align-self-start {
+  align-self: flex-start;
+}
+
+.align-self-center {
+  align-self: center;
 }
