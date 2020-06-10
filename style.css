@@ -20,11 +20,16 @@ h1 {
 }
 
 .item {
+  display: flex;
   background-color: #efdcd5;
   padding: 2rem;
   margin: 0.1rem;
   text-align: center;
   flex: 1 1 auto;
+}
+
+.item-child {
+  margin: auto;
 }
 
 .title {
@@ -118,4 +123,16 @@ h1 {
 
 .align-self-center {
   align-self: center;
+}
+
+.flex-grow-2 {
+  flex-grow: 2;
+}
+
+.flex-grow-3 {
+  flex-grow: 3;
+}
+
+.flex-grow-4 {
+  flex-grow: 4;
 }
